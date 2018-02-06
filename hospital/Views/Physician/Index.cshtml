@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DataAccess.Models.Physician>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="content-area">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.City)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    table tr td, table tr th {
+        border: 2px solid #000;
+        padding: 5px 10px;
+        text-align: center;
+    }
+</style>

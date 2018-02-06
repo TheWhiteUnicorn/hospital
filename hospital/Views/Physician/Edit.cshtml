@@ -1,0 +1,21 @@
+﻿@model DataAccess.Models.Physician
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div class="content-area">
+    <form action="/Physician/Edit" method="post">
+        <p>
+            @Html.LabelFor(model => model.Name, "Введите имя пациента: ")<br />
+            @Html.EditorFor(model => model.Name)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.City, "Введите Город: ")<br />
+            @Html.EditorFor(model => model.City)
+        </p>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
